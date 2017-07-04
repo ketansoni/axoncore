@@ -18,10 +18,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <!--<modules>-->
-        <!--&lt;!&ndash;<module>axon-common</module>&ndash;&gt;-->
-        <!--&lt;!&ndash;<module>db-common</module>&ndash;&gt;-->
-    <!--</modules>-->
-
+    <modules>
+        <module>axon-commons</module>
+        <module>db-commons</module>
+    </modules>
 
 </project>
