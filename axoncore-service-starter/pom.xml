@@ -11,16 +11,18 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ketan.axoncore</groupId>
-    <artifactId>axoncore-domain-db-starter</artifactId>
+    <artifactId>axoncore-service-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <description>Axon Core Service DB starter</description>
+    <description>Axon Core Service starter</description>
 
     <dependencies>
         <dependency>
             <groupId>com.ketan.axoncore</groupId>
-            <artifactId>db-commons</artifactId>
+            <artifactId>axon-commons</artifactId>
         </dependency>
     </dependencies>
+
+
 
 </project>
