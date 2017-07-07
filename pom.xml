@@ -13,6 +13,8 @@
         <module>axoncore-bom</module>
         <module>axoncore-dependencies</module>
         <module>axoncore-lib</module>
+        <module>axoncore-domain-db-starter</module>
+        <module>axoncore-domain-service-starter</module>
     </modules>
 
 </project>
