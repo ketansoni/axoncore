@@ -11,10 +11,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ketan.axoncore</groupId>
-    <artifactId>axoncore-service-starter</artifactId>
+    <artifactId>axoncore-domain-service-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <description>Axon Core Service starter</description>
+    <description>Axon Core Domain Service starter</description>
 
     <dependencies>
         <dependency>
