@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-//@ComponentScan({
-//        "com.ketan.axoncore.**.db"})
+@ComponentScan({"com.ketan.axoncore.db","com.ketan.axoncore.**.db"})
 public class Application {
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(Application.class);

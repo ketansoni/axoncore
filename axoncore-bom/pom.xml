@@ -34,51 +34,57 @@
     </dependencyManagement>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                </plugin>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <configuration>
-                        <addResources>false</addResources>
-                        <classifier>app</classifier>
-                        <mainClass>com.ketan.axoncore.db.Application</mainClass>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>spring-boot-packaged</id>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>spring-boot-exploded</id>
-                            <configuration>
-                                <layout>DIR</layout>
-                            </configuration>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <!--<configuration>-->
-                    <!--<addResources>false</addResources>-->
-                    <!--<classifier>app</classifier>-->
-                    <!--<mainClass>com.ketan.ecom.order.db.Application</mainClass>-->
-                    <!--</configuration>-->
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <packagingExcludes>WEB-INF/lib-provided/*</packagingExcludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <addResources>false</addResources>
+                    <!--<classifier>app</classifier>-->
+                    <mainClass>com.ketan.axoncore.db.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>spring-boot-packaged</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>spring-boot-exploded</id>
+                        <configuration>
+                            <layout>DIR</layout>
+                        </configuration>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
             </plugin>
         </plugins>
+
     </build>
 
 </project>
