@@ -61,7 +61,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <addResources>false</addResources>
-                    <!--<classifier>app</classifier>-->
+                    <classifier>app</classifier>
                     <mainClass>com.ketan.axoncore.db.Application</mainClass>
                 </configuration>
                 <executions>
